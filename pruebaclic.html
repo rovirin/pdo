@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="paradetalle" data-id="1">Roscón de Reyes</div>
+    <div class="paradetalle" data-id="2">Brazo de Gitano</div>
+    <div class="paradetalle" data-id="3">Mostachón</div>
+
+    <script>
+        document.addEventListener('click',function(e){
+                var enlace = e.target.closest('.paradetalle');        
+
+                if(!enlace){return;}
+
+                alert(enlace.dataset.id);
+        });
+    </script>
+</body>
+</html>
